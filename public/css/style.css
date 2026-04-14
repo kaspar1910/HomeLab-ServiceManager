@@ -1,0 +1,128 @@
+html, body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #262b31, #111111);
+  color: #d1d5db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 34%;
+  min-width: 20rem;
+  max-width: 28rem;
+  background: linear-gradient(to bottom, #1f242a, #171b20);
+  border: 0.08rem solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.4rem;
+  box-shadow:
+    0 1.4rem 3rem rgba(0, 0, 0, 0.38),
+    0 0.15rem 0.5rem rgba(255, 255, 255, 0.04) inset;
+  padding: 8vh 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  margin: 0 0 1.2vh 0;
+  font-size: 2.3rem;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 4.5vh 0;
+  font-size: 1rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vh;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  border: 0.08rem solid #49515a;
+  border-radius: 0.9rem;
+  background: #2b3138;
+  color: #e5e7eb;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.login-form input::placeholder {
+  color: #94a3b8;
+}
+
+.login-form input:hover {
+  border-color: #66707b;
+}
+
+.login-form input:focus {
+  border-color: #7b8794;
+  box-shadow: 0 0 0 0.22rem rgba(160, 170, 180, 0.14);
+}
+
+.login-form button {
+  width: 62%;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.9rem;
+  background: #4a5159;
+  color: #f3f4f6;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.login-form button:hover {
+  background: #5b646e;
+  transform: translateY(-0.08rem);
+  box-shadow: 0 0.7rem 1.6rem rgba(120, 128, 138, 0.18);
+}
+
+.login-form button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+@media (max-width: 700px) {
+  .login-card {
+    width: 84%;
+    min-width: 0;
+    padding: 6vh 7%;
+    border-radius: 1.1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 4vh;
+  }
+
+  .login-form input {
+    font-size: 1rem;
+    border-radius: 0.85rem;
+  }
+
+  .login-form button {
+    width: 70%;
+    font-size: 1rem;
+    border-radius: 0.85rem;
+  }
+}

@@ -1,0 +1,136 @@
+html, body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #262b31, #111111);
+  color: #d1d5db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-card {
+  width: 42%;
+  min-width: 22rem;
+  max-width: 34rem;
+  background: linear-gradient(to bottom, #1f242a, #171b20);
+  border: 0.08rem solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.4rem;
+  box-shadow:
+    0 1.4rem 3rem rgba(0, 0, 0, 0.38),
+    0 0.15rem 0.5rem rgba(255, 255, 255, 0.04) inset;
+  padding: 7vh 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  margin: 0 0 1vh 0;
+  font-size: 2.3rem;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 4vh 0;
+  font-size: 1rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  margin-bottom: 4vh;
+}
+
+.service-card {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.1rem;
+  border: 0.08rem solid #49515a;
+  border-radius: 0.9rem;
+  background: #2b3138;
+  color: #e5e7eb;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  background: #353c44;
+  border-color: #66707b;
+  transform: translateY(-0.08rem);
+  box-shadow: 0 0.7rem 1.6rem rgba(120, 128, 138, 0.14);
+}
+
+.service-card:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.logout-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logout-btn {
+  width: 52%;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.9rem;
+  background: #4a5159;
+  color: #f3f4f6;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #5b646e;
+  transform: translateY(-0.08rem);
+  box-shadow: 0 0.7rem 1.6rem rgba(120, 128, 138, 0.18);
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+@media (max-width: 700px) {
+  .dashboard-card {
+    width: 84%;
+    min-width: 0;
+    padding: 6vh 7%;
+    border-radius: 1.1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 3.5vh;
+  }
+
+  .service-card {
+    font-size: 1rem;
+    border-radius: 0.85rem;
+    padding: 0.95rem 1rem;
+  }
+
+  .logout-btn {
+    width: 68%;
+    font-size: 1rem;
+    border-radius: 0.85rem;
+  }
+}

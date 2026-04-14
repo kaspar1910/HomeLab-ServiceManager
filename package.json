@@ -1,0 +1,28 @@
+{
+  "name": "homelab-servicemanager",
+  "version": "1.0.0",
+  "description": "Homelab manager for using home server remotely",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaspar1910/HomeLab-ServiceManager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kaspar1910/HomeLab-ServiceManager/issues"
+  },
+  "homepage": "https://github.com/kaspar1910/HomeLab-ServiceManager#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0"
+  }
+}

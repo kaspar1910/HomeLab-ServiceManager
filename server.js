@@ -2,6 +2,8 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const bcrypt = require('bcrypt');
+const SQLiteStore = require("connect-sqlite3")(session);
+const fs = require("fs");
 require('dotenv').config();
 
 const app = express();
@@ -10,6 +12,9 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 const SESSION_SECRET = process.env.SESSION_SECRET;
 const PASSWORD_HASH = process.env.ADMIN_PASSWORD_HASH;
+const sessionFolder = path.join(__dirname, "sessions");
+
+fs.mkdirSync(sessionFolder, { recursive: true });
 
 //makes it work if there is cloudflare problems since it is a proxy
 app.set('trust proxy', 1);
@@ -21,14 +26,19 @@ app.use('/css', express.static(path.join(__dirname, 'public', 'css')));
 //session definitions:
 app.use(
     session({
-        name: 'kaspar.sid',
+        store: new SQLiteStore({
+            db: "sessions.sqlite",
+            dir: sessionFolder,
+            concurrentDB: true
+        }),
+        name: "kaspar.sid",
         secret: SESSION_SECRET,
         resave: false,
         saveUninitialized: false,
         cookie: {
             httpOnly: true,
-            sameSite: 'lax',
-            secure: false, // set to true when posting on https
+            sameSite: "lax",
+            secure: "auto",
             maxAge: 60 * 60 * 1000
         }
     })

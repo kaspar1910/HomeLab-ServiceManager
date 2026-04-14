@@ -21,6 +21,7 @@
   "homepage": "https://github.com/kaspar1910/HomeLab-ServiceManager#readme",
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "connect-sqlite3": "^0.9.16",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "express-session": "^1.19.0"
